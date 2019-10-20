@@ -2,7 +2,7 @@
  * Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
  * In Pascal's triangle, each number is the sum of the two numbers directly above it.
  *  Algorithm -
-  Although the algorithm is very simple, the iterative approach to constructing 
+  Although the algorithm is very simple, the iterative approach to constructing
   Pascal's triangle can be classified as dynamic programming because we construct each row based on the previous row.
  *
  *   [  [1], [1, 1], [1, 2, 1]]
@@ -50,7 +50,7 @@ var generate = function(numRows) {
     //push new array to result array
     counter++;
   }
-  return result;
+  return result; //[[], [], [], ...]
 };
 
 var a = generate(5);

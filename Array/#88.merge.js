@@ -7,9 +7,12 @@ The number of elements initialized in nums1 and nums2 are m and n respectively.
 You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
  */
 
-/**                 
- *    2   5   6               1   2  3
- *            6            3 
+/**           
+ *                   * curIdx 
+ *   2  5   6  0  0  0
+ *       
+ *    2   5   6                 1   2  3
+ *            6              3 
  *                    6
  *        5                  3           
  *                  5  6  
@@ -39,12 +42,13 @@ var merge = function(nums1, m, nums2, n) {
   //output: no return, mutate nums1
   //constraints O(n) , O(1) space
 
-  //point1 start from m-1th element of nums
+  //point1 start from m-1th element of nums1
   let idx1 = m - 1;
   //point2 starts from n-1th element of nums2
   let idx2 = n - 1;
   //cur  starts from last elements of nums (n+m -1)
   let curIdx = m + n - 1;
+
   while (idx2 >= 0) {
     if (nums1[idx1] >= nums2[idx2]) {
       nums1[curIdx] = nums1[idx1];
