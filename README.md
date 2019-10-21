@@ -4,17 +4,16 @@ Leetcode challenges in javascript
 
 ## Table of Contents
 
-- Array
-
-  - #1 two Sum
-  - #3 Longest Substring Without Repeating Characters
-  - #11 Container With Most Water
-  - #12 Integer to Roman
-  - #31 next Permutation
-  - #33 Search in Rotated Sorted Array
-  - #88 merge Sort Array
-  - #108 Convert Sorted Array to Binary Search Tree
-  - #118 pascal's Triangle
-  - #1213 Intersection of Three Sorted Arrays
-
-- LinkedList
+|  #   |                     Title                      | Source Code | Tags  | Difficulty |
+| :--: | :--------------------------------------------: | :---------: | :---: | :--------: |
+|  1   |                    Two Sum                     |             | Array |    Easy    |
+|  3   | Longest Substring Without Repeating Characters |             | Array |    Easy    |
+|  11  |           Container With Most Water            |             | Array |    Easy    |
+|  12  |                Integer to Roman                |             | Array |    Easy    |
+|  31  |                next Permutation                |             | Array |    Easy    |
+|  33  |         Search in Rotated Sorted Array         |             | Array |    Easy    |
+|  88  |                merge Sort Array                |             | Array |    Easy    |
+| 108  |   Convert Sorted Array to Binary Search Tree   |             | Array |    Easy    |
+| 118  |               pascal's Triangle                |             | Array |    Easy    |
+| 896  |                 MonotonicArray                 |             | Array |    Easy    |
+| 1213 |      Intersection of Three Sorted Arrays       |             | Array |    Easy    |
