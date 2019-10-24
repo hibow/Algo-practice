@@ -18,5 +18,6 @@ Leetcode challenges in javascript
 | 108  |            Convert Sorted Array to Binary Search Tree             |    [JS](https://github.com/hibow/js_practice/blob/master/Array/108.sortedArrayToBST.js)    |    Array    |    Easy    |
 | 118  |                         pascal's Triangle                         |    [JS](https://github.com/hibow/js_practice/blob/master/Array/118.pascalsTriangle.js)     |    Array    |    Easy    |
 | 138  |                   Copy List with Random Pointer                   |    [JS](https://github.com/hibow/js_practice/blob/master/Array/118.pascalsTriangle.js)     | Linked List |   Medium   |
+| 141  |                         Linked List Cycle                         |    [JS](https://github.com/hibow/js_practice/blob/master/Array/118.pascalsTriangle.js)     | Linked List |    Easy    |
 | 896  |                          MonotonicArray                           |     [JS](https://github.com/hibow/js_practice/blob/master/Array/896.monotonicArray.js)     |    Array    |    Easy    |
 | 1213 |                Intersection of Three Sorted Arrays                |  [JS](https://github.com/hibow/js_practice/blob/master/Array/1213.arraysIntersection.js)   |    Array    |    Easy    |
