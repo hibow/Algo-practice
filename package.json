@@ -1,0 +1,14 @@
+{
+  "name": "js_practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hibow/js_practice.git",
+  "author": "hibow",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
