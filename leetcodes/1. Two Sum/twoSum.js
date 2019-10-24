@@ -46,7 +46,6 @@ var twoSum = function(nums, target) {
   // }
   //one pass hash table: O(n)
   let obj = {};
-
   for (let i = 0; i < nums.length; i++) {
     let remain = target - nums[i];
     if (obj[remain] !== undefined && obj[remain] !== i) {
@@ -56,3 +55,6 @@ var twoSum = function(nums, target) {
   }
 };
 
+var output = 1;
+
+module.exports = twoSum;
