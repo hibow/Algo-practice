@@ -15,6 +15,6 @@ def twoSum(nums, target):
 
 if __name__ == "__main__":
     import sys
-    print(sys.argv[2])
-    a = twoSum(sys.argv[1], sys.argv[2])
+    arg1 = [int(s) for s in sys.argv[1].split(',')]
+    a = twoSum(arg1, int(sys.argv[2]))
     print(a)

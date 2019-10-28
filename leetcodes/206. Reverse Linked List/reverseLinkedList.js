@@ -49,14 +49,14 @@ var reverseList = function(head) {
    */
   //iterative
   let prev = null;
-  let newNext = null;
+  let tempNext = null;
   let cur = head;
   while (cur.next !== null) {
     //swap next and prev
-    newNext = cur.next;
+    tempNext = cur.next;
     cur.next = prev;
     prev = cur;
-    cur = newNext;
+    cur = tempNext;
   }
   cur.next = prev;
   return cur;
