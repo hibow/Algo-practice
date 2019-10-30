@@ -15,7 +15,7 @@ class Solution(object):
         if not root:
             return True
         tempQ = []
-        tempQ.append((root.left, root.right))
+        tempQ.append((root.left, root.right))  # tuple in array
         while tempQ:
             l, r = tempQ.pop(0)
             if not l and not r:
