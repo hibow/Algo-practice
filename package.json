@@ -6,9 +6,10 @@
   "author": "hibow",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --config ./jest.config.js"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.6.3",
     "jest": "^24.9.0"
   }
 }
