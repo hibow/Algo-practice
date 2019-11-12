@@ -6,7 +6,7 @@ Example:
 Input: [1,2,3,null,5,null,4]
 Output: [1, 3, 4]
 Explanation:
-                  BFS or DFS  
+                  BFS or DFS  time: O(n) space O(n)
    1            <--- the right most one of each level
  /   \
 2     3         <---
