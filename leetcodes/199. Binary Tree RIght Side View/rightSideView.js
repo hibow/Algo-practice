@@ -19,6 +19,8 @@ Explanation:
  * @param {TreeNode} root
  * @return {number[]}
  */
+
+// #1 BFS
 var rightSideView = function(root) {
   //only check the last one of each level
 
@@ -45,4 +47,26 @@ var rightSideView = function(root) {
     }
   }
   return result;
+};
+
+//#2 DFS O(n) for call stack.
+var rightSideView = function(root) {
+  //only check the last one of each level
+
+  //push each level into stack
+  //pop it until find the last one
+  let result = [];
+  dfs(root, result, 1);
+  return result;
+};
+
+var dfs = function(node, result, level) {
+  if (node === null) {
+    return;
+  }
+  if (level > result.length) {
+    result.push(node.val);
+  }
+  dfs(node.right, result, level + 1);
+  dfs(node.left, result, level + 1);
 };
