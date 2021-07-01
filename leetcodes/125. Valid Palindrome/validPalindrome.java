@@ -9,6 +9,7 @@ class Solution {
     }
 }
 /***
+!! super fast!! -> use charMap to identify if the status of char-> only need to know char not digit nor letters
       public boolean isPalindrome(String s) {
         char[] charMap = new char[256];
         for (int i = 0; i < 10; i++)
