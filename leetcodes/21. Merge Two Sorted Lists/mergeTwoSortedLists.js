@@ -65,7 +65,7 @@
 //time o(n)
 //space O(n)
 var mergeTwoLists2 = function(l1, l2) {
-  if (!l1 && !l2) return [];
+  if (!l1 && !l2) return null;
   if (!l1 || !l2) return l1? l1:l2;
   //the smaller one becomes the head
   if (l1.val < l2.val) {
