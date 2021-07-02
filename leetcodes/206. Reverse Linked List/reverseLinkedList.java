@@ -3,7 +3,7 @@ import java.util.LinkedList;
 class Solution {
   public ListNode reverseList(ListNode head) {
     // input: ListNode
-    // output: no output-> mutate the original ListNode
+    // output: ListNode
     // edge case: if list is null return null
     // use cur pointer starts from first node of list
     // copy next node to temp
