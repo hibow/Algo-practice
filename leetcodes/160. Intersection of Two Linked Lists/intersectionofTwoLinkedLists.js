@@ -39,10 +39,58 @@
  * You may assume there are no cycles anywhere in the entire linked structure.
  * Your code should preferably run in O(n) time and use only O(1) memory.
  *          
- * [Comments]
- *          
+ * [Constraints]
+The number of nodes of listA is in the m.
+The number of nodes of listB is in the n.
+0 <= m, n <= 3 * 104
+1 <= Node.val <= 105
+0 <= skipA <= m
+0 <= skipB <= n
+intersectVal is 0 if listA and listB do not intersect.
+intersectVal == listA[skipA + 1] == listB[skipB + 1] if listA and listB intersect.
  *          
  *          
  */          
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
 
+/**
+ * @param {ListNode} headA
+ * @param {ListNode} headB
+ * @return {ListNode}
+ */
+ var getIntersectionNode = function(headA, headB) {
+    //input: LinkedList, LinkedList
+    //output: LinkedList Node
+    //edge case: if no intersection return null
+    //how to verify if HeadA is HeadB? use if (headA == headB) in js
+    /***
+     * test case:
+     * 1. same length w intersection return node
+     * 2. different length with intersection return node
+     * 3. no intersection  return null -> worse case time O(2n) their intersection is null so requires to traverse twice
+     * 
+     * time: O(n) -> iterate two list
+     * space: O(1) -> no extra memory space
+     */
+    if (!headA || !headB) return null;
+    let curA = headA;
+    let curB = headB;
+    //iterate over listA and listB, until nodeA == node B
+    while( curA != curB) {
+      //use the difference of length:
+      //when shorter one first moves to the end, it will goes to longer list
+      //when longer one first moves to the end, it will goes to shorter list 
+      curA = (curA == null)? headB: curA.next;
+      curB = (curB == null)? headA: curB.next;
+    }
+    
+    //return nodeA or nodeB, it might be null if no inter
+    return curA;
+};
 
