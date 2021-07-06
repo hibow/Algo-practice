@@ -25,6 +25,9 @@
      *
      *
      */
+    if (num == null || num.length == 0) {
+      return 0;
+    }
     let nLen = nums.length;
     if (nLen === 1) return nums[0];
     let h = nLen - 1;
