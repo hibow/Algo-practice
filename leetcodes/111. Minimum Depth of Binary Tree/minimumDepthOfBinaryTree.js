@@ -30,3 +30,32 @@
    //if both sides have child -> return min depth of two sides
 };
 
+//iterative method
+//time: O(n), space O(n) (worse case- single node tree)
+/***
+ * test case:
+ * Input: root = [3,9,20,null,null,15,7]
+    Output: 2 
+    why it is 2? -> root = 1 -> one node -> 1 + 1 = 2
+ * 
+ */
+var minDepth = function(root) {
+    if (!root) return 0;
+    let level = 1;
+    let queue  = [];
+    queue.push(root);
+    while (queue.length !== 0) {
+       let size = queue.length;
+      //add for loop for each level
+      for (let i = 0; i < size; i++) {
+        //queue => FIFO -> shift() but not pop()
+        let node = queue.shift(); 
+
+        if (!node.left && !node.right) return level;
+        if (node.left !== null) queue.push(node.left);
+        if (node.right !== null) queue.push(node.right);
+      }
+      level++;
+    }
+    return level;
+};
