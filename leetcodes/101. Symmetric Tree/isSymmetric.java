@@ -32,3 +32,25 @@ class Solution {
     return true;
   }
 }
+
+// recursive solution:
+/**
+ * time: O(n) -> total numbers of node space: O(n) -> the height of the tree ->
+ * worse case: h = n
+ */
+class Solution {
+  public boolean isSymmetric(TreeNode root) {
+    if (root == null)
+      return true;
+    return isBothSymmetric(root.left, root.right);
+  }
+
+  private boolean isBothSymmetric(TreeNode root1, TreeNode root2) {
+    if (root1 == null && root2 == null)
+      return true;
+    if (root1 == null || root2 == null)
+      return false;
+    return (root1.val == root2.val) && isBothSymmetric(root1.left, root2.right)
+        && isBothSymmetric(root1.right, root2.left);
+  }
+}
