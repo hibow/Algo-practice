@@ -28,6 +28,8 @@
      *  if node is null -> node is not leave false 
      *  if root.left && root.right all null -> true
      *
+     * time O(n), space O(n)
+     * 
      */
      if (!root) return 0;
      if (isLeaf(root.left)) return root.left.val + sumOfLeftLeaves(root.right);
