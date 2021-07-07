@@ -5,6 +5,8 @@
  var findShortestSubArray = function(nums) {
   //input: numbers array
   //output: integer
+
+  //time: O(2n) , space(O(n))
   //edge case: non negative integers in the array , length >= 1
   /**
    * test case: consider mutiple duplicate integers with same frequency
