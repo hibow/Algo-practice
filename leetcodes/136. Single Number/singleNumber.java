@@ -15,3 +15,13 @@ class Solution {
     return ans;
   }
 }
+/**
+ * 1) iterate over the array and add non-duplicate one in the new list, if it's
+ * duplicated, remove it from new list. # in JAVA, use ArrayList<>() for add()
+ * and remove(), get(0) to get the single number time O(n^2)- iterate the list
+ * and search the new list ( check contains), space O(n) new list
+ * 
+ * 2) hashtable use HashMap<>(), for using put(i, count), iterate over the array
+ * to put it into map, and iterate over the map to get count is 1 time O(2n),
+ * space O(n)
+ */
