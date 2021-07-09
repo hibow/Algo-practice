@@ -25,3 +25,9 @@ class Solution {
  * to put it into map, and iterate over the map to get count is 1 time O(2n),
  * space O(n)
  */
+
+/**
+ * use XOR to swap variables without using one more variable x = x ^ y y = x ^ y
+ * x = x ^ y
+ * 
+ */
