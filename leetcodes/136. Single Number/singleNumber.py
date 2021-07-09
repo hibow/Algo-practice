@@ -12,7 +12,7 @@
 
 # python3
 
-
+# time is longer, but space is smaller..
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         return reduce(lambda x, y: x ^ y, nums, 0)
