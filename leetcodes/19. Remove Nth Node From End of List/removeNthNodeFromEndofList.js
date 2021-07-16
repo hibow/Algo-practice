@@ -39,12 +39,11 @@ var removeNthFromEnd = function(head, n) {
   newHead.next = head;
   let fstPt = newHead;
   let secPt = newHead;
-  //create a gap between fstPt and secPt with n
-  //when fstPt run to the finish line, secPt will be at the position before the nth node.
+ //when fstPt run to the finish line, secPt will be at the position before the nth node.
   //secPt will skip nth node and point its next to next next node
   //return newHead.next
   let count = n;
-  while (fstPt.val) {
+  while (fstPt.next) {
     if (count > 0) {
       fstPt = fstPt.next;
       count--;
@@ -56,6 +55,7 @@ var removeNthFromEnd = function(head, n) {
   secPt.next = secPt.next.next;
 
   return newHead.next;
-};
+};  //create a gap between fstPt and secPt with n
+
 
 
