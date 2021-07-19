@@ -11,5 +11,5 @@
  * @return {ListNode[]}
  */
  var splitListToParts = function(head, k) {
-
+  
 };
