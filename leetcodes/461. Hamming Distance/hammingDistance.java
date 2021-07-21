@@ -28,6 +28,7 @@ class Solution {
     }
     return cnt;
   }
+  // time O(1-> 32 iterations) space O(1)
 
   // 3) JAVA integer.bitcount() to count all 1s
   public int hammingDistance3(int x, int y) {
