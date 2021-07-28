@@ -31,7 +31,7 @@
     //add 1 as the last odd counts
     return addOdd? sum + 1 : sum ;
     //return sum
-    //time: O(n) , space: O(1) -> charArray
+    //time: O(n) , space: O(n) -> strMap
 };
 
 //2. one for loop solution, only count to 2 and then add into sum and reduce 2 in counts
