@@ -7,7 +7,8 @@ class Solution {
     // edge case: at least string length is 1
     // 1. Anagram -> same length -> sorting character and compare if they are equal
     // sorting time O(nlogn) , comparison time O(n);
-    // space O(n) to copy string
+    // space O(n) to copy string -> ignore it since it is a language dependent
+    // detail
     // 2. Hashmap -> if all english letters (lowercase) -> create int[26]
     // iterate over s and add counts in the map; iterate over t and reduce count in
     // the table
