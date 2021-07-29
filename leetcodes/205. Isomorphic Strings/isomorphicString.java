@@ -37,16 +37,47 @@ class Solution {
 
   // time faster than previous one (using array is faster, but why array can use
   // string as index?), space O(N->1) similar to previous one
-public boolean isIsomorphic(String s, String t) {
-  int[] preIndexOfS = new int[256];
-  int[] preIndexOfT = new int[256];
-  for (int i = 0; i < s.length(); i++) {
+  public boolean isIsomorphic(String s, String t) {
+    int[] preIndexOfS = new int[256];
+    int[] preIndexOfT = new int[256];
+    for (int i = 0; i < s.length(); i++) {
       char sc = s.charAt(i), tc = t.charAt(i);
       if (preIndexOfS[sc] != preIndexOfT[tc]) {
-          return false;
+        return false;
       }
       preIndexOfS[sc] = i + 1;
       preIndexOfT[tc] = i + 1;
+    }
+    return true;
+  }
+
+  // change char to int to store in the array, same performance result as previous
+  // one.
+public boolean isIsomorphic(String str1, String str2) {
+  if(str1.length() != str2.length()) return false;
+  
+  int[] arr1 = new int[256];
+  int[] arr2 = new int[256];
+  
+  Arrays.fill(arr1, -1);
+  Arrays.fill(arr2, -1);
+  
+  for(int i=0;i<str1.length();i++){
+      int value1 = str1.charAt(i);
+      int  value2 = str2.charAt(i);
+      if(arr1[value1]== -1){
+          arr1[value1] =  value2;
+      } else {
+          if(arr1[value1] != value2) return false;
+      }
+       
+      if(arr2[value2]== -1){
+          arr2[value2] =  value1;
+      } else {
+          if(arr2[value2] != value1) return false;
+      }
+      
   }
   return true;
+  
 }
