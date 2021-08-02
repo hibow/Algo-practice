@@ -36,7 +36,8 @@ class Solution {
 }
 
   // time faster than previous one (using array is faster, but why array can use
-  // string as index?), space O(N->1) similar to previous one
+  // string as index-> ascii code, ex: arr['a'] == arr[97]), space O(N->1) similar
+  // to previous one
   public boolean isIsomorphic(String s, String t) {
     int[] preIndexOfS = new int[256];
     int[] preIndexOfT = new int[256];
