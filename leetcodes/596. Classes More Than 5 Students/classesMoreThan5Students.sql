@@ -17,7 +17,21 @@
 -- | H       | Math       |
 -- | I       | Math       |
 -- +---------+------------+
-
+DROP TABLE
+IF
+    EXISTS courses;
+CREATE TABLE courses ( student VARCHAR ( 255 ), class VARCHAR ( 255 ) );
+INSERT INTO courses ( student, class )
+VALUES
+    ( 'A', 'Math' ),
+    ( 'B', 'English' ),
+    ( 'C', 'Math' ),
+    ( 'D', 'Biology' ),
+    ( 'E', 'Math' ),
+    ( 'F', 'Computer' ),
+    ( 'G', 'Math' ),
+    ( 'H', 'Math' ),
+    ( 'I', 'Math' );
 -- 1. use subquery, find the count of student by groupby
 select class
 from
