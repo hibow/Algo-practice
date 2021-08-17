@@ -10,7 +10,7 @@
 //edge case: at least two lowercase letter
 //if larger than the last one of the list, it will wrap around, return the first character of the list
 /**
- * 1) iterate over the array from the start, if letters[i] >= target return letters[i-1]
+ * 1) iterate over the array from the start, if letters[i] > target return letter i else return letters[0]
  * time: O(n), space O(1)
  * 2) binary search: time O(logN)
  * use mid, run iteration while h >= l
