@@ -41,10 +41,12 @@
 -- 
 
 
-/* get the record from the top 3 unique salaries */
+/* get the record from the top 3 unique salaries 
+*/
 select e1.Name as 'Employee', e.Salary
 from Employee e1
 where 3 >
+/* create a count colum to count anything bigger than it, and only select 1 and 2 (only 0, 1, 2 bigger than target)*/
 (select count(distinct e2.Salary)
 from Employee e2
 where e2.Salary > e1.Salary
