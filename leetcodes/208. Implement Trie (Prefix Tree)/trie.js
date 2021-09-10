@@ -9,7 +9,7 @@ trie.insert("apple");
 trie.search("apple");   // returns true
 trie.search("app");     // returns false
 trie.startsWith("app"); // returns true
-trie.insert("app");   
+trie.insert("app");
 trie.search("app");     // returns true
 Note:
 
@@ -19,6 +19,11 @@ All inputs are guaranteed to be non-empty strings.
 linked list for each character of word
 time O(n)
 space O(n) -> linked list
+
+explains of trie:
+one node maps to different characters, they are different links to next characters and become new nodes to map the next.
+node[c]
+or node.children[c] -> limite the children size to 26 (lowercase characters)
  */
 
 /**
@@ -86,3 +91,54 @@ Trie.prototype.startsWith = function(prefix) {
  * var param_2 = obj.search(word)
  * var param_3 = obj.startsWith(prefix)
  */
+
+//solution2
+let ALPHAPET_SIZE = 26;
+
+class TrieNode
+{
+    constructor()
+    {
+      this.isEndOfWord = false;
+      this.children = new Array(ALPHAPET_SIZE);
+      for (let i = 0; i < ALPHAPET_SIZE; i++) {
+        this.children[i] = null;
+      }
+    }
+}
+
+let root;
+
+function insert(key) {
+  let level;
+  let length = key.length;
+  let index;
+  let pCrawl = root;
+  for (level = 0; level < length; level++){
+    index = key[level].charCodeAt(0) -'a'.charCodeAt(0);
+    if (pCrawl.children[index] == null)
+      pCrawl.children[index] = new TrieNode;
+
+    pCrawl = pCrawl.children[index];
+    //root move to next node
+  }
+  //final word
+  pCrawl.isEndOfWord = true;
+}
+
+function search(key){
+  let level;
+  let length = key.length;
+  let index;
+  let pCrawl = root;
+  for (level = 0; level < length; level++){
+    index = key[level].charCodeAt(0) - 'a'.charCodeAt(0);
+    if (pCrawl.children[index] == null) return false;
+
+    pCrawl = pCrawl.children[index];
+    //if not null, root moves to next node to search
+  }
+//it searches for word not prefix
+  return (pCrawl.isEndOfWord);
+  //if prefix, just return true
+}
