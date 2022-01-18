@@ -1,6 +1,7 @@
 import java.util.PriorityQueue;
 
 class Solution {
+<<<<<<< HEAD
     public int findKthLargest(int[] nums, int k) {
       /**
        input: array and integer
@@ -21,4 +22,4 @@ class Solution {
       }
       return pq.peek();
     }
-}
+  }
