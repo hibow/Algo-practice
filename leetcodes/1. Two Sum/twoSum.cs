@@ -4,7 +4,7 @@ public class Solution {
         //output: number array
         /*
         1) bineray search or two pointers
-           time O(nlogn), space O(1)
+           time O(nlogn), space O(n)
 
         2) use hashmap
            time O(n), space O(n)
