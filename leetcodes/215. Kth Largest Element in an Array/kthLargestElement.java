@@ -17,7 +17,7 @@ class Solution {
           pq.add(val);
           if (pq.size() > k)
               pq.poll();
-             //add() & poll(): time O(logK)
+             //add() & poll():  time O(logK)
       }
       return pq.peek();
     }
