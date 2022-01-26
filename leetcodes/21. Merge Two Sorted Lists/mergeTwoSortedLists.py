@@ -3,9 +3,8 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-from audioop import lin2adpcm
 
-
+#iterative: time O(n), space O(n)
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
       if not list1: return list2
