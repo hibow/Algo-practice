@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+      #time O(n), space O(n)
       dataMap = {}
       start = maxLength = 0
       for end in range(len(s)):
