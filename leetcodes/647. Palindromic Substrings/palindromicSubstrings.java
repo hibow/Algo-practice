@@ -1,7 +1,7 @@
 class Solution {
     //start from each index and try to extend palindrome for both odd and even length
     //time O(n^2), space O(1)
-    int cout = 0;
+    int count = 0;
     public int countSubstrings( String s) {
       if (s == null || s.length() == 0) return 0;
       for (int i = 0; i < s.length(); i++) { //i is the mid point
