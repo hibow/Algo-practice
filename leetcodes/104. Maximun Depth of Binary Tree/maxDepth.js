@@ -49,6 +49,7 @@ best or average case: space O(logN) -> O(1) for logN times
 
 //   return result;
 // };
+//DFS -> Top down timeO(n), spaceO(n) recursive stack
 var maxDepth = function(root) {
   //base case
   if (root === null) {
@@ -56,3 +57,23 @@ var maxDepth = function(root) {
   }
   return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
+//BFS time O(n), space O(n)
+var maxDepth = function(root) {
+  //return integer
+  if (root !==0 && !root) return 0;
+  let queue = [[root, 1]];
+  let depth = 0;
+  while(queue.length > 0) {
+    [node, num] = queue.pop();
+    if (node.val!== undefined) {
+      depth = Math.max(depth, num)
+    }
+    if (node.left) {
+      queue.push([node.left, num+1])
+    }
+    if (node.right) {
+      queue.push([node.right, num+1])
+    }
+  }
+  return depth;
+}
